@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | A{% endblock %}
+
+{% block body %}
+
+    <div>
+        <img src="{{ asset('img/B.png') }}" alt="logo A" width="40px"> </a>
+    </div>
+
+    <div>
+        {{ form_start(categoryForm) }}
+
+        {{ form_widget(categoryForm) }}
+
+        <button>Rechercher</button>
+
+        {{ form_end(categoryForm) }}
+
+
+
+
+    </div>
+
+    <section class="img-list">
+        {% for bliste in blistes  %}
+            <article>
+                <a href="{{ path('main_bdetail',{'id':bliste.id}) }}" title="b details">
+                    <img src="{{ asset('img/Letter/B/'~ bliste.img) }}" alt="{{ bliste.name}}" width="100px">
+                </a>
+            </article>
+        {% endfor %}
+
+    </section>
+
+
+
+
+{% endblock %}

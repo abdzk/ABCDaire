@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ b.name }} | {{ parent() }}
+{% endblock %}
+{% block body %}
+    <h2> {{ b.name }}</h2>
+    <div>
+        <img src="{{ asset('img/Letter/B/'~b.img)}}" width="40px" alt="image_b">
+    </div>
+    <div>
+        {{ b.description }}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        {{ form_start(abcdForm) }}
+        {{ form_widget(abcdForm) }}
+        <button>Créer</button>
+        {{ form_end(abcdForm) }}
+    </div>
+{% endblock %}
+
+{% block title %}{{ parent() }} | create{% endblock %}
+
